@@ -1,0 +1,32 @@
+*
+
+# config
+!/config/fancymenu
+!/config/fancymenu/**
+!/config/ftbquests
+!/config/ftbquests/**
+!/config/jade
+!/config/jade/**
+!/config/ModernUI
+!/config/ModernUI/**
+!/config/gtceu.yaml
+!/config/tips.json
+!/config/betterf3.toml
+!/config/embeddium-options.json
+!/config/sodium-extra-options.json
+!/config/RuOK.toml
+
+# defaultconfig
+!/defaultconfigs
+!/defaultconfigs/**
+
+!/kubejs
+!/kubejs/**
+
+!/resourcepacks
+!/resourcepacks/**
+
+# other
+!/options.txt
+!/.gitignore
+!README.md
