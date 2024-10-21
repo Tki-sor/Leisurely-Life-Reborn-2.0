@@ -22,3 +22,21 @@ StartupEvents.registry("item", event => {
 
     event.create("llr:tki")
 })
+
+CreateHeatJS.registerHeatEvent((event) => {
+    event.registerHeat("melt", 1, 0xFF8C00)
+        .addHeatSource("minecraft:magma_block")
+        .register()
+})
+
+const $EntityTravelToDimensionEvent = Java.loadClass("net.minecraftforge.event.entity.EntityTravelToDimensionEvent")
+const $PortalSpawnEvent = Java.loadClass("net.minecraftforge.event.level.BlockEvent$PortalSpawnEvent")
+// ForgeEvents.onEvent($EntityTravelToDimensionEvent, event => {
+//     let resourceKey = event.dimension;
+//     if (resourceKey.getPath() == "the_nether") {
+//         event.setCanceled(true);
+//     }
+// })
+ForgeEvents.onEvent($PortalSpawnEvent, event => {
+    event.setCanceled(true)
+})

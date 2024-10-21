@@ -1,5 +1,6 @@
 
 ServerEvents.recipes(event => {
+    let { createmetallurgy } = event.recipes
     // 木板
     event.forEachRecipe(
         {
@@ -22,6 +23,26 @@ ServerEvents.recipes(event => {
         event.recipes.create.cutting([Item.of(id, 2)], [`${mod}:${woodType}_planks`])
 
     })
+
+    // 玻璃
+    event.remove({output: 'minecraft:glass', type: "smelting"})
+    createmetallurgy.melting(Fluid.of('gtceu:glass', 144), 'gtceu:glass_dust', 12 * 20, 'melt')
+    createmetallurgy.melting(Fluid.of('gtceu:glass', 144), 'minecraft:glass', 6 * 20, 'melt')
+    createmetallurgy.casting_in_basin('minecraft:glass', Fluid.of('gtceu:glass', 144), 6 * 20)
+
+    // 高炉
+    event.replaceInput({output: 'minecraft:blast_furnace'}, '#forge:ingots/iron', '#forge:ingots/andesite_alloy')
+
+    // 岩浆块
+    event.custom({
+        "type": "exdeorum:barrel_mixing",
+        "fluid": "minecraft:lava",
+        "fluid_amount": 1000,
+        "ingredient": {
+          "item": "minecraft:netherrack"
+        },
+        "result": "minecraft:magma_block"
+      })
 
     //箱子
     event.remove({ output: 'minecraft:chest' })

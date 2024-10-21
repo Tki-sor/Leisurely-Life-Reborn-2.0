@@ -3,6 +3,8 @@
 # config
 !/config/fancymenu
 !/config/fancymenu/**
+!/config/drippyloadingscreen
+!/config/drippyloadingscreen/**
 !/config/ftbquests
 !/config/ftbquests/**
 !/config/jade
@@ -15,6 +17,17 @@
 !/config/embeddium-options.json
 !/config/sodium-extra-options.json
 !/config/RuOK.toml
+!/config/integrateddynamics-common.toml
+!/config/defaultworldtype
+!/config/defaultworldtype/**
+!/config/ftbteamskyblock
+!/config/ftbteamskyblock/**
+!/config/exdeorum-common.toml
+!/config/inventoryprofilesnext/inventoryprofiles.json
+!/config/inventoryprofilesnext/integrationHints
+!/config/inventoryprofilesnext/integrationHints/**
+
+
 
 # defaultconfig
 !/defaultconfigs

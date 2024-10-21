@@ -33,7 +33,9 @@ ServerEvents.recipes(event => {
                             p: output.chance
                         }
                     })
+
                 })
+
             })
         })
     }

@@ -24,6 +24,7 @@ ServerEvents.recipes(event => {
         A: '#forge:tools/saws',
         B: '#forge:ingots/andesite_alloy'
     })
+    event.shapeless('create:shaft', ['#forge:ingots/andesite_alloy'])
     event.recipes.create.cutting(['2x create:shaft'], ['create:andesite_alloy'])
 
     // 齿轮
@@ -34,6 +35,14 @@ ServerEvents.recipes(event => {
         "C"
     ], {
         A: '#forge:tools/hammers',
+        B: 'create:shaft',
+        C: '#forge:gears/wood'
+    })
+    event.shaped('create:cogwheel', [
+        "B",
+        "C",
+        "B"
+    ], {
         B: 'create:shaft',
         C: '#forge:gears/wood'
     })
@@ -78,7 +87,7 @@ ServerEvents.recipes(event => {
     event.shaped('create:mechanical_press', [
         ['', 'create:shaft', ''],
         ['#forge:gears/iron', 'create:andesite_casing', '#forge:springs/iron'],
-        ['', '#forge:storage_blocks/iron', '']
+        ['', '#forge:storage_blocks/wrought_iron', '']
     ])
 
     // 动力搅拌器
@@ -98,7 +107,7 @@ ServerEvents.recipes(event => {
     ], {
         A: '#forge:tools/hammers',
         B: 'create:shaft',
-        C: '#forge:plates/iron'
+        C: '#forge:plates/andesite_alloy'
     })
 
     // 溜槽
